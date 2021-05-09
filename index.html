@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<style>
+    .t {
+ background-color: rgb(63, 189, 211);
+  color: black;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+ 
+  border-radius: 15px;
+}
+h1 {text-align: center;}
+p {text-align: center;}
+ body {
+ background: url('https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/rm222-mind-22_1_2.jpg?w=1300&dpr=1&fit=default&crop=default&q=80&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=e63e0b1e39d1e3d03836b9ea858cce20.jpg');
+ background-size: 1920px 1080px;
+ }
+p.real{
+border: 5px solid rgb(0, 0, 0);
+ border-radius: 80px;
+height: 20px;
+width: 50%;
+margin: auto;
+}
+input[type=text], input[type=password],input[type=email]
+{
+border: 5px solid rgb(0, 0, 0);
+ border-radius: 10px;
+ height:30px;
+ width:300px;
+
+}
+a:link, a:visited , input[type=submit], input[type=reset]{
+  background-color: rgb(83, 94, 241);
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+ margin-right:60px;
+ margin-left:60px;
+  border-radius: 15px;
+}
+
+a:hover, a:active, input[type=submit]:hover, input[type=reset]:hover{
+  background-color: white ;
+  color:black;
+}
+legend{
+  background-color: rgb(192, 160, 111);
+  color:white;
+  border-radius:8px;
+}
+fieldset{
+  width:400px;
+  margin:auto;
+  border-radius: 20px;
+}
+.form__field {
+  position: relative;
+}
+
+.form__field .icon {
+	position:absolute;
+  right: 0em;
+  top: 50%;
+  transform: translateY(-50%)
+}
+
+.icon {
+  font-size: 2rem;
+}
+.form__input:valid {
+  border-color: forestgreen;
+}
+
+.form__input:valid + .icon::after {
+  content: '😎';
+}
+
+.form__input:invalid {
+  border-color: rgb(5, 4, 4);
+}
+
+.form__input:invalid + .icon::after {
+  content: '🙄';
+}
+
+</style>
+<script>
+  function validate() {
+    if (document.myForm.Name.value == "") {
+      alert("Please enter your name!");
+      document.myForm.Name.focus();
+      return false;
+    }
+    
+    if (document.myForm.Email.value == "" ) {
+      alert("Please enter your Email!");
+      document.myForm.Email.focus();
+      return false;
+    }
+   
+    if (document.myForm.phone.value == "" || isNaN(document.myForm.phone.value) ||
+      document.myForm.phone.value.length != 10) {
+      alert("Please enter correct phone number. Please do not include country code");
+      document.myForm.phone.focus();
+      return false;
+    }
+    if (document.myForm.pwd.value == "") {
+      alert("Please enter correct password which should be greater than 5 digits ");
+      document.myForm.pwd.focus();
+      return false;
+    }
+    if (document.myForm.pwd1.value == "") {
+      alert("Please enter correct password which should be greater than 6 digits ");
+      document.myForm.pwd1.focus();
+      return false;
+    }
+    if (document.myForm.pwd.value != document.myForm.pwd1.value) {
+      alert("Password did not match.Enter again")
+      return false;
+    }
+    return (true);
+}
+</script>
+</head>
+<body>
+    <div class="t">
+<h1>Vixar</h1>
+<p>Photo hosting website</p></div>
+<hr><hr>
+<br><br><br><br>
+<p class="real">
+This site is created to view,share images in high res without any cost or signup.Now share your creativity with the world.
+</p><br><br><br>
+<form name="myForm" method="POST" onsubmit="return(validate());" action="slides.html">
+  <fieldset>
+    <legend> SignUp to view slideshows</legend>
+    <table>
+
+      <tr>
+        <td align="center">Name</td>
+        <td><input type="text" name="Name"></td>
+      </tr>
+      <tr>
+        <td align="center">Email</td>
+        <td><input type="email" name="Email"></td>
+      </tr>
+
+      <tr>
+        <td align="center">Phone No.</td>
+        <td><input type="text" name="phone"></td>
+      </tr>
+      <tr>
+        <td align="center">Password</td>
+		<td><div class="form__field">
+			<input type="password" name="pwd" class="form__input" pattern=".{5,}" required>
+		<span class="icon"></span></div></td>
+      </tr>
+      <tr>
+        <td align="center">Confirm Password</td>
+        <td><div class="form__field">
+			<input type="password" name="pwd1" class="form__input" pattern=".{5,}" required>
+		<span class="icon"></span>
+		</div>
+		</td>
+      </tr>
+      <tr>
+        <td align="center">
+          <p><input type="reset" value="Reset"></p>
+        </td>
+        <td><input type="submit" value="Submit"></td>
+      </tr>
+    </table>
+  </fieldset>
+</form>
+
+<br><br>
+
+<br><p align="center"><a class="donate" href="donate2.html" target="_blank">Support our work</a></p><br><br>
+<p align="center"><a href="project2.html" target="_blank">Next page</a></p><br><br>
+<p align="center"><a href="C:/Users/ashish/OneDrive/Documents/homework4.html" target="_blank">Previous works</a></p>
+
+</body>
+
+</html>

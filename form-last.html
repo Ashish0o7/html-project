@@ -1,0 +1,352 @@
+<html>
+
+<head>
+    <title>Student Registration Form</title>
+<style>
+    body{
+     background:url('https://images.pexels.com/photos/5011647/pexels-photo-5011647.jpeg');  
+     background-size: 1920px 1080px; 
+    }
+    h3{
+  font-family: Calibri; 
+  font-size: 25pt;         
+  font-style: normal; 
+  font-weight: bold; 
+  color:SlateBlue;
+  text-align: center; 
+  text-decoration: none;
+}
+#bd{
+    height:40px;
+    width:80px;
+    border-radius:4px;
+    background-color: coral;
+    color:black;
+}
+.s{
+    color:white;
+}
+
+.tm{
+  font-family: Calibri; 
+  
+  color:white; 
+  
+  font-size: 11pt; 
+  font-style: normal;
+  font-weight: bold;
+  background-color: rgb(0, 0, 0); 
+  border-radius:30px;
+
+}
+table.inner{
+  border: 2px;
+}
+input[type=text],textarea,input[type=email]{
+      width: 65%;
+      background-color: cadetblue;
+            margin-bottom: 10px;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+
+}
+
+</style>
+<script>
+    function validate() {
+        if (document.myForm.FirstName.value == "") {
+            alert("Please enter your first name!");
+            document.myForm.FirstName.focus();
+            return false;
+        }
+        if (document.myForm.LastName.value == "") {
+            alert("Please enter your last name!");
+            document.myForm.LastName.focus();
+            return false;
+        }
+        if (document.myForm.Email.value == "") {
+            alert("Please enter your Email!");
+            document.myForm.Email.focus();
+            return false;
+        }
+
+        if (document.myForm.phone.value == "" || isNaN(document.myForm.phone.value) ||
+            document.myForm.phone.value.length != 10) {
+            alert("Please enter correct phone number.");
+            document.myForm.phone.focus();
+            return false;
+        }
+         if (document.myForm.Address.value == "") {
+            alert("Please enter your address!");
+            document.myForm.Address.focus();
+            return false;
+        }
+         if (document.myForm.Pin.value == "" || isNaN(document.myForm.Pin.value) ||
+            document.myForm.Pin.value.length != 6) {
+            alert("Please enter your correct pin!");
+            document.myForm.Pin.focus();
+            return false;
+        }
+         if (document.myForm.City.value == "") {
+            alert("Please enter your City!");
+            document.myForm.City.focus();
+            return false;
+        }
+         if (document.myForm.State.value == "") {
+            alert("Please enter your State!");
+            document.myForm.State.focus();
+            return false;
+         }
+         if (document.myForm.aTH.value == "") {
+            alert("Enter your board!");
+            document.myForm.aTH.focus();
+            return false;
+        }
+           if (document.myForm.aTHM.value == "") {
+            alert("Please enter your class 10th percentage!");
+            document.myForm.aTHM.focus();
+            return false;
+        }
+        if (document.myForm.aTHY.value == "") {
+            alert("Please enter passing year of class 10th!");
+            document.myForm.aTHY.focus();
+            return false;
+        }
+        if (document.myForm.bTH.value == "") {
+            alert("Enter you board!");
+            document.myForm.bTH.focus();
+            return false;
+        }
+          if (document.myForm.bTHM.value == "") {
+            alert("Please enter your CLASS 12 percentage!");
+            document.myForm.bTHM.focus();
+            return false;
+        }
+         if (document.myForm.bTHY.value == "") {
+            alert("Please enter passing year of class 12th!");
+            document.myForm.bTHM.focus();
+            return false;
+        }
+        return true;
+    }
+</script>
+</head>
+
+<body>
+    <h3>REGISTRATION FORM</h3>
+
+<form name="myForm" method="POST" onsubmit="return(validate());">
+    <table align="center" cellpadding="10" class="tm">
+
+        <tr>
+            <td>FIRST NAME</td>
+            <td><input type="text" name="FirstName">
+            </td>
+        </tr>
+        <tr>
+            <td>LAST NAME</td>
+            <td><input type="text" name="LastName" >
+            </td>
+        </tr>
+        <tr>
+            <td>DATE OF BIRTH</td>
+
+            <td>
+                <select name="Birthday_day" id="bd">
+                    <option value="-1">Day:</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                    <option value="29">29</option>
+                    <option value="30">30</option>
+
+                    <option value="31">31</option>
+                </select>
+
+                <select id="bd" name="Birthday_Month">
+                    <option value="-1">Month:</option>
+                    <option value="January">Jan</option>
+                    <option value="February">Feb</option>
+                    <option value="March">Mar</option>
+                    <option value="April">Apr</option>
+                    <option value="May">May</option>
+                    <option value="June">Jun</option>
+                    <option value="July">Jul</option>
+                    <option value="August">Aug</option>
+                    <option value="September">Sep</option>
+                    <option value="October">Oct</option>
+                    <option value="November">Nov</option>
+                    <option value="December">Dec</option>
+                </select>
+
+                <select name="Birth year" id="bd">
+
+                    <option value="-1">Year:</option>
+                  
+                    <option value="2006">2006</option>
+                    <option value="2005">2005</option>
+                    <option value="2004">2004</option>
+                    <option value="2003">2003</option>
+                    <option value="2002">2002</option>
+                    <option value="2001">2001</option>
+                    <option value="2000">2000</option>
+
+                    <option value="1999">1999</option>
+                    <option value="1998">1998</option>
+                    <option value="1997">1997</option>
+                    <option value="1996">1996</option>
+                    <option value="1995">1995</option>
+                   
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>EMAIL ID</td>
+            <td><input type="email" name="Email"/></td>
+        </tr>
+        <tr>
+            <td>PHONE NUMBER</td>
+            <td>
+                <input type="text" name="phone">
+            </td>
+        </tr>
+        <tr>
+            <td>GENDER</td>
+            <td>
+                Male <input type="radio" name="Gender" value="Male" />
+                Female <input type="radio" name="Gender" value="Female" />
+            </td>
+        </tr>
+
+        <tr>
+            <td>ADDRESS <br /><br /><br /></td>
+            <td><textarea name="Address" rows="4" cols="30"></textarea></td>
+        </tr>
+
+        <tr>
+            <td>CITY</td>
+            <td><input type="text" name="City" maxlength="30" />
+            </td>
+        </tr>
+        <tr>
+            <td>PIN CODE</td>
+            <td><input type="text" name="Pin" maxlength="6">
+            </td>
+        </tr>
+
+        <tr>
+            <td>STATE</td>
+            <td><input type="text" name="State" maxlength="30">
+            </td>
+        </tr>
+
+        <tr>
+            <td>COUNTRY</td>
+            <td><input type="text" name="Country" value="India"/></td>
+        </tr>
+
+        <tr>
+            <td>Interests <br /><br /><br /></td>
+
+            <td>
+                Sports
+                <input type="checkbox" name="Hobby_Drawing" value="Drawing" />
+                Singing
+                <input type="checkbox" name="Hobby_Singing" value="Singing" />
+                Dancing
+                <input type="checkbox" name="Hobby_Dancing" value="Dancing" />
+                Reading
+                <input type="checkbox" name="Hobby_Cooking" value="Cooking" />
+                <br />
+            </td>
+        </tr>
+
+        <tr>
+            <td>QUALIFICATION <br /><br /><br /><br /><br /><br /><br /></td>
+
+            <td>
+                <table class="s">
+
+                    <tr>
+                        <td align="center"><b>S.No.</b></td>
+                        <td align="center"><b>Examination</b></td>
+                        <td align="center"><b>Board</b></td>
+                        <td align="center"><b>Percentage</b></td>
+                        <td align="center"><b>Year of Passing</b></td>
+                    </tr>
+
+                    <tr>
+                        <td>1</td>
+                        <td>Class X</td>
+                        <td><input type="text" name="aTH" maxlength="30" /></td>
+                        <td><input type="text" name="aTHM" maxlength="30" /></td>
+                        <td><input type="text" name="aTHY" maxlength="30" /></td>
+                    </tr>
+
+                    <tr>
+                        <td>2</td>
+                        <td>Class XII</td>
+                        <td><input type="text" name=" bTH" maxlength="30" /></td>
+                        <td><input type="text" name="bTHM" maxlength="30" /></td>
+                        <td><input type="text" name="bTHY" maxlength="30" /></td>
+                    </tr>
+
+                </table>
+
+            </td>
+        </tr>
+        <tr>
+            <td>COURSE<br />APPLYING FOR</td>
+            <td>
+                B.E CS
+                <input type="radio" name="be" value="cs">
+                B.E EEE
+                <input type="radio" name="be" value="eee">
+                B.E ME
+                <input type="radio" name="be" value="me">
+                B.E CE
+                <input type="radio" name="be" value="ce">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+            </td>
+        </tr>
+    </table>
+
+    </form>
+
+</body>
+
+</html>

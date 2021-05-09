@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+           body {
+ background: url('26364.jpg');
+ background-size:1920px 1080px;;
+            font-family: Arial;
+            font-size: 17px;
+            padding: 8px;
+        }
+        
+        
+        
+         .container {
+
+            background-color: #f2f2f2;
+            padding: 5px 20px 15px 20px;
+            border: 6px solid rgb(43, 7, 7);
+            border-radius: 20px;
+         margin: auto;
+          width:500px;
+        }
+        input[type=text], input[type=date],input[type=number]{
+            width: 95%;
+            margin-bottom: 20px;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+     .btn {
+            background-color: #83a5d8;
+            color: white;
+            padding: 12px;
+            margin: 10px 0;
+            border: none;
+            width: 100%;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 17px;
+        }
+          .icon-container {
+            margin-bottom: 20px;
+            padding: 7px 0;
+            font-size: 24px;
+        }
+        .btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+    <script>
+        function confirmInput() {
+        fname = document.forms[0].fname.value;
+        amount = document.forms[0].amount.value;
+            alert("Thank you " + fname + " for your donation of Rs." + amount + ".Now you will be redirected to home page." );
+        }
+    </script>
+</head>
+
+<body>
+    <h2 align="center">Donate Page</h2><br><br><br>
+<div class="container">
+    <form method="POST" onsubmit="confirmInput()" action="index.html">
+        <h3>Payment</h3><br>
+        <label for="fname">Accepted Cards</label>
+        <div class="icon-container">
+            <i class="fa fa-cc-visa" style="color:navy;"></i>
+            <i class="fa fa-cc-amex" style="color:blue;"></i>
+            <i class="fa fa-cc-mastercard" style="color:red;"></i>
+            <i class="fa fa-cc-discover" style="color:orange;"></i>
+        </div>
+        Cardholder Name<br>
+        <input id="fname"  type="text" name="cardname" placeholder="Ashish Kumar" required><br>
+        Credit card number<br>
+        <input  id="ccnum" type="text" name="cardnumber"  placeholder="1234-5678-0123-4444" required><br>
+        Expiry Date<br>
+        <input id="date" type="date" name="date" required><br>
+        CVV<br>
+        <input id="cvv" type="text" name="cvv" placeholder="001" maxlength=3 pattern="\d{3}" required><br>
+        Amount<br>
+        <input id="amount" type="number" name="amount" placeholder="Rs.100" required><br>
+      
+       <input type="submit"  class="btn"><br>
+    </form>
+</div>
+
+</body>
+
+</html>

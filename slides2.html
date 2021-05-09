@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <style>
+        * {
+            box-sizing: border-box
+        }
+
+        .t {
+            background-color: rgb(63, 189, 211);
+            color: black;
+            padding: 10px 15px;
+            text-align: center;
+            text-decoration: none;
+
+            border-radius: 15px;
+        }
+
+        body {
+            background: url('https://images.pexels.com/photos/3683056/pexels-photo-3683056.jpeg');
+            background-size: 1920px 1200px;
+        }
+
+        .mySlides1,
+        .mySlides2 {
+            display: none
+        }
+
+        img {
+            vertical-align: middle;
+            width: 400px;
+            height: 600px;
+            border: 7px solid rgb(10, 10, 6);
+            border-radius: 20px;
+        }
+
+        .slideshow-container {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+        }
+
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            border-radius: 0 3px 3px 0;
+        }
+
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .prev:hover,
+        .next:hover {
+            background-color: #f1f1f1;
+            color: black;
+        }
+
+        .m {
+            background-color: black;
+            color: white;
+            padding: 5px 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            border-radius: 8px;
+        }
+
+        .m:hover,
+        .m:active {
+            background-color: white;
+            color: black;
+        }
+
+        .n {
+            text-align: center;
+            width: 1920px;
+            padding: 15px;
+        }
+
+        .msgBtn {
+            margin-top: 40px;
+            margin-left: 700px;
+            margin-right: 200px;
+            color: white;
+            background-color: #4CAF50;
+            padding: 16px;
+            font-size: 16px;
+            border-radius: 15px;
+            text-decoration: none;
+        }
+
+        .msgBtnBack {
+            margin-top: 40px;
+            margin-left: 100px;
+            margin-right: 200px;
+            color: white;
+            background-color: #4CAF50;
+            padding: 16px;
+            font-size: 16px;
+            border-radius: 15px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="t">
+        <h1>Vixar</h1>
+        <p>Photo hosting website</p>
+    </div>
+    <hr>
+    <hr>
+    <br>
+    <div class="n">
+        <a href="pc.html" class="m">Animals</a>
+    </div>
+    <div class="slideshow-container">
+        <div class="mySlides1">
+            <img src="cb.jpeg" style="width:100%">
+        </div>
+
+        <div class="mySlides1">
+            <img src="ca.jpeg" style="width:100%">
+        </div>
+
+        <div class="mySlides1">
+            <img src="cc.jpeg" style="width:100%">
+        </div>
+        <div class="mySlides1">
+            <img src="cd.jpeg" style="width:100%">
+        </div>
+        <div class="mySlides1">
+            <img src="ce.jpeg" style="width:100%">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+    </div>
+    <br>
+    <div class="n">
+        <a href="pd.html" class="m">Vehicles</a>
+    </div>
+    <div class="slideshow-container">
+        <div class="mySlides2">
+            <img src="da.jpeg" style="width:100%">
+        </div>
+
+        <div class="mySlides2">
+            <img src="db.jpeg" style="width:100%">
+        </div>
+
+        <div class="mySlides2">
+            <img src="dc.jpeg" style="width:100%">
+        </div>
+        <div class="mySlides2">
+            <img src="dd.jpeg" style="width:100%">
+        </div>
+        <div class="mySlides2">
+            <img src="de.jpeg" style="width:100%">
+        </div>
+        <br><br><br>
+        <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+    </div><br>
+    <div class="x">
+        <a href="index.html" class="msgBtn">Home Page</a>
+        <a href="project2.html" class="msgBtnBack">Categories</a>
+    </div>
+    <script>
+        var slideIndex = [1, 1];
+        var slideId = ["mySlides1", "mySlides2"]
+        showSlides(1, 0);
+        showSlides(1, 1);
+
+        function plusSlides(n, no) {
+            showSlides(slideIndex[no] += n, no);
+        }
+
+        function showSlides(n, no) {
+            var i;
+            var x = document.getElementsByClassName(slideId[no]);
+            if (n > x.length) { slideIndex[no] = 1 }
+            if (n < 1) { slideIndex[no] = x.length }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex[no] - 1].style.display = "block";
+        }
+    </script>
+
+</body>
+
+</html>
